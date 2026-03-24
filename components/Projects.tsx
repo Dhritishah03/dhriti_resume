@@ -46,7 +46,7 @@ function ProjectLinks({ project }: { project: Project }) {
 
 function StackTags({ stack }: { stack: string[] }) {
   return (
-    <div className="mb-5 flex flex-wrap gap-1.5">
+    <div className="mb-4 flex flex-wrap gap-1.5">
       {stack.map((tag) => (
         <span
           key={tag}
@@ -64,28 +64,26 @@ export default function Projects() {
   const rest = portfolio.projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="bg-canvas py-20 md:py-28">
+    <section id="projects" className="bg-surface py-14 md:py-20">
       <div className="mx-auto max-w-5xl px-6">
-        {/* Section label */}
-        <div className="mb-3 flex items-center gap-3">
-          <div className="h-px w-6 bg-muted/40" />
-          <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
-            Projects
-          </p>
-        </div>
-
-        {/* Heading */}
-        <div className="mb-12">
+        {/* Section label + heading inline */}
+        <div className="mb-8">
+          <div className="mb-2 flex items-center gap-3">
+            <div className="h-px w-6 bg-muted/40" />
+            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+              Projects
+            </p>
+          </div>
           <h2 className="font-serif text-[28px] text-ink md:text-[34px]">
             Things I&apos;ve built.
           </h2>
-          <p className="mt-2 text-[14px] font-light text-muted">
+          <p className="mt-1 text-[14px] font-light text-muted">
             A selection of work I&apos;m proud of.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           {/* Featured — spans both columns */}
           {featured && (
             <motion.article
@@ -94,18 +92,18 @@ export default function Projects() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="col-span-1 rounded-2xl border border-[rgba(0,0,0,0.09)] p-6 transition-colors duration-150 hover:bg-[#f8f8f6] md:col-span-2"
+              className="col-span-1 rounded-xl border border-[rgba(0,0,0,0.09)] p-5 transition-colors duration-150 hover:bg-[#f8f8f6] md:col-span-2"
             >
-              <div className="mb-4 flex items-center gap-3">
+              <div className="mb-3 flex items-center gap-3">
                 <span className="font-mono text-[11px] text-muted">01</span>
                 <span className="rounded-[6px] bg-accent-light px-2 py-0.5 font-mono text-[11px] text-accent">
                   Featured
                 </span>
               </div>
-              <h3 className="mb-2 text-[19px] font-medium text-ink">
+              <h3 className="mb-1.5 text-[18px] font-medium text-ink">
                 {featured.title}
               </h3>
-              <p className="mb-4 text-[13px] font-light leading-[1.7] text-muted">
+              <p className="mb-3 text-[13px] font-light leading-[1.7] text-muted">
                 {featured.description}
               </p>
               <StackTags stack={featured.stack} />
@@ -122,15 +120,15 @@ export default function Projects() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="rounded-2xl border border-[rgba(0,0,0,0.09)] p-6 transition-colors duration-150 hover:bg-[#f8f8f6]"
+              className="rounded-xl border border-[rgba(0,0,0,0.09)] p-5 transition-colors duration-150 hover:bg-[#f8f8f6]"
             >
-              <p className="mb-3 font-mono text-[11px] text-muted">
+              <p className="mb-2 font-mono text-[11px] text-muted">
                 {String(i + 2).padStart(2, "0")}
               </p>
-              <h3 className="mb-2 text-[17px] font-medium text-ink">
+              <h3 className="mb-1.5 text-[16px] font-medium text-ink">
                 {project.title}
               </h3>
-              <p className="mb-4 text-[13px] font-light leading-[1.7] text-muted">
+              <p className="mb-3 text-[13px] font-light leading-[1.7] text-muted">
                 {project.description}
               </p>
               <StackTags stack={project.stack} />

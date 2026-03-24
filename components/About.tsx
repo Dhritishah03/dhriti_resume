@@ -7,19 +7,19 @@ import Skills from "./Skills";
 
 export default function About() {
   return (
-    <section id="about" className="bg-canvas py-20 md:py-28">
+    <section id="about" className="bg-surface py-14 md:py-20">
       <div className="mx-auto max-w-5xl px-6">
         {/* Section label */}
-        <div className="mb-14 flex items-center gap-3">
+        <div className="mb-8 flex items-center gap-3">
           <div className="h-px w-6 bg-muted/40" />
           <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
             About
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
           {/* Left — bio paragraphs */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {portfolio.about.paragraphs.map((para, i) => (
               <motion.p
                 key={`about-para-${i}`}

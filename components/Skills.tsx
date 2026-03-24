@@ -6,10 +6,10 @@ import { portfolio } from "@/data/portfolio";
 
 export default function Skills() {
   return (
-    <div className="space-y-7">
+    <div className="space-y-5">
       {portfolio.skills.map((group) => (
         <div key={group.label}>
-          <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
+          <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
             {group.label}
           </p>
           <div className="flex flex-wrap gap-2">

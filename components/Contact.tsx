@@ -24,17 +24,17 @@ const LINKS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-canvas py-20 md:py-28">
+    <section id="contact" className="bg-canvas py-14 md:py-20">
       <div className="mx-auto max-w-5xl px-6">
         {/* Section label */}
-        <div className="mb-14 flex items-center gap-3">
+        <div className="mb-8 flex items-center gap-3">
           <div className="h-px w-6 bg-muted/40" />
           <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
             Contact
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-12">
           {/* Left */}
           <motion.div
             custom={0}
@@ -43,7 +43,7 @@ export default function Contact() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <h2 className="mb-4 font-serif text-[32px] leading-[1.1] text-ink">
+            <h2 className="mb-3 font-serif text-[28px] leading-[1.1] text-ink md:text-[32px]">
               Let&apos;s work together.
             </h2>
             <p className="text-[15px] font-light leading-[1.8] text-muted">
@@ -52,7 +52,7 @@ export default function Contact() {
               something with real-world impact. I work best in environments
               where ownership and speed are valued.
             </p>
-            <p className="mt-4 font-mono text-[12px] text-muted">
+            <p className="mt-3 font-mono text-[12px] text-muted">
               I usually respond within 48 hours.
             </p>
           </motion.div>
@@ -64,7 +64,7 @@ export default function Contact() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
-            className="space-y-3"
+            className="space-y-2"
           >
             {LINKS.map((link) => (
               <a
@@ -72,7 +72,7 @@ export default function Contact() {
                 href={link.href}
                 target={link.label !== "Email" ? "_blank" : undefined}
                 rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
-                className="group flex min-h-[52px] items-center justify-between rounded-xl border border-[rgba(0,0,0,0.09)] px-4 py-3 transition-colors duration-150 hover:border-accent/30 hover:bg-accent-light"
+                className="group flex min-h-[48px] items-center justify-between rounded-xl border border-[rgba(0,0,0,0.09)] px-4 py-2.5 transition-colors duration-150 hover:border-accent/30 hover:bg-accent-light"
               >
                 <span className="font-mono text-[12px] uppercase tracking-[0.08em] text-muted group-hover:text-accent">
                   {link.label}

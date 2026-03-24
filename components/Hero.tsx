@@ -6,15 +6,15 @@ import { portfolio } from "@/data/portfolio";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-screen items-center bg-canvas">
-      <div className="mx-auto w-full max-w-3xl px-6 py-24">
+    <section className="flex min-h-[88vh] items-center bg-canvas">
+      <div className="mx-auto w-full max-w-3xl px-6 py-16">
         {/* Availability label */}
         <motion.p
           custom={0}
           variants={heroFadeUp}
           initial="hidden"
           animate="visible"
-          className="mb-7 font-mono text-xs uppercase tracking-[0.15em] text-accent"
+          className="mb-5 font-mono text-xs uppercase tracking-[0.15em] text-accent"
         >
           {portfolio.available
             ? "Available for Full-Time Roles"
@@ -27,7 +27,7 @@ export default function Hero() {
           variants={heroFadeUp}
           initial="hidden"
           animate="visible"
-          className="mb-7 font-serif text-[36px] leading-[1.05] text-ink md:text-[56px]"
+          className="mb-5 font-serif text-[36px] leading-[1.05] text-ink md:text-[56px]"
         >
           {portfolio.headline.prefix}
           <br />
@@ -40,7 +40,7 @@ export default function Hero() {
           variants={heroFadeUp}
           initial="hidden"
           animate="visible"
-          className="mb-10 max-w-lg font-sans text-[16px] font-light leading-[1.75] text-muted"
+          className="mb-8 max-w-lg font-sans text-[16px] font-light leading-[1.75] text-muted"
         >
           {portfolio.tagline}
         </motion.p>
@@ -51,7 +51,7 @@ export default function Hero() {
           variants={heroFadeUp}
           initial="hidden"
           animate="visible"
-          className="mb-8 flex flex-wrap gap-3"
+          className="mb-5 flex flex-wrap gap-3"
         >
           <a
             href="#projects"
