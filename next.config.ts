@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/YOUR_REPO_NAME" : "",
-  assetPrefix: isProd ? "/YOUR_REPO_NAME/" : "",
+  basePath: isProd ? "/dhriti_resume" : "",
+  assetPrefix: isProd ? "/dhriti_resume/" : "",
 };
 
 export default nextConfig;
